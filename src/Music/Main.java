@@ -12,13 +12,14 @@ import javax.swing.JFrame;
 public class Main {
 	public static Vector<Hint> hints = new Vector<Hint>();
 	public static void main(String[] why) {
-		hints.add(new Hint("Подсказка #0","Катапульта не может маршировать","src/Assets/Art/Hint/0.PNG", 280)); //Catapults can't walk on marches
-		hints.add(new Hint("Подсказка #1","Копейщик полезен для подсчета вражеской кавалерии","src/Assets/Art/Hint/1.PNG", 280)); //Spearmen are useful to counter enemy cavalry
-		//hints.add(new Hint("Подсказка #2","Нельзя забывать субсидировать фабрики","src/Assets/Art/Hint/2.PNG", 440));
-		//hints.add(new Hint("Подсказка #3","Плантации и календарь идеальны для добычи чугуна","src/Assets/Art/Hint/3.PNG", 280)); //Локализация CivIV от 1С: Sugar = чугун
-		hints.add(new Hint("Подсказка #4","Топорщику прекрасна рука, чтобы вручить сражение","src/Assets/Art/Hint/4.PNG", 280)); //Axemen excel at hand to hand combat
-		hints.add(new Hint("Подсказка #6","Почтовые рыцари доминируют поля в Средневековье","src/Assets/Art/Hint/6.PNG", 280)); //Mailed knights dominate fields during Medieval
-		//hints.add(new Hint("Подсказка #7","Тарелка брони дает булавоносца с мощными защитными бонусами ","src/Assets/Art/Hint/7.PNG", 280)); //Plate armor provides macemen with strong defensive bonuses
+		//Р—РґРµСЃСЊ Р±С‹Р» РЎР°С€Р° РЇРІРѕСЂСЃРєРёР№. РџСЂРѕРІРµСЂРєР° СЃРІСЏР·Рё:)
+		hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #0","ГЉГ ГІГ ГЇГіГ«ГјГІГ  Г­ГҐ Г¬Г®Г¦ГҐГІ Г¬Г Г°ГёГЁГ°Г®ГўГ ГІГј","src/Assets/Art/Hint/0.PNG", 280)); //Catapults can't walk on marches
+		hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #1","ГЉГ®ГЇГҐГ©Г№ГЁГЄ ГЇГ®Г«ГҐГ§ГҐГ­ Г¤Г«Гї ГЇГ®Г¤Г±Г·ГҐГІГ  ГўГ°Г Г¦ГҐГ±ГЄГ®Г© ГЄГ ГўГ Г«ГҐГ°ГЁГЁ","src/Assets/Art/Hint/1.PNG", 280)); //Spearmen are useful to counter enemy cavalry
+		//hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #2","ГЌГҐГ«ГјГ§Гї Г§Г ГЎГ»ГўГ ГІГј Г±ГіГЎГ±ГЁГ¤ГЁГ°Г®ГўГ ГІГј ГґГ ГЎГ°ГЁГЄГЁ","src/Assets/Art/Hint/2.PNG", 440));
+		//hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #3","ГЏГ«Г Г­ГІГ Г¶ГЁГЁ ГЁ ГЄГ Г«ГҐГ­Г¤Г Г°Гј ГЁГ¤ГҐГ Г«ГјГ­Г» Г¤Г«Гї Г¤Г®ГЎГ»Г·ГЁ Г·ГіГЈГіГ­Г ","src/Assets/Art/Hint/3.PNG", 280)); //Г‹Г®ГЄГ Г«ГЁГ§Г Г¶ГЁГї CivIV Г®ГІ 1Г‘: Sugar = Г·ГіГЈГіГ­
+		hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #4","Г’Г®ГЇГ®Г°Г№ГЁГЄГі ГЇГ°ГҐГЄГ°Г Г±Г­Г  Г°ГіГЄГ , Г·ГІГ®ГЎГ» ГўГ°ГіГ·ГЁГІГј Г±Г°Г Г¦ГҐГ­ГЁГҐ","src/Assets/Art/Hint/4.PNG", 280)); //Axemen excel at hand to hand combat
+		hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #6","ГЏГ®Г·ГІГ®ГўГ»ГҐ Г°Г»Г¶Г Г°ГЁ Г¤Г®Г¬ГЁГ­ГЁГ°ГіГѕГІ ГЇГ®Г«Гї Гў Г‘Г°ГҐГ¤Г­ГҐГўГҐГЄГ®ГўГјГҐ","src/Assets/Art/Hint/6.PNG", 280)); //Mailed knights dominate fields during Medieval
+		//hints.add(new Hint("ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  #7","Г’Г Г°ГҐГ«ГЄГ  ГЎГ°Г®Г­ГЁ Г¤Г ГҐГІ ГЎГіГ«Г ГўГ®Г­Г®Г±Г¶Г  Г± Г¬Г®Г№Г­Г»Г¬ГЁ Г§Г Г№ГЁГІГ­Г»Г¬ГЁ ГЎГ®Г­ГіГ±Г Г¬ГЁ ","src/Assets/Art/Hint/7.PNG", 280)); //Plate armor provides macemen with strong defensive bonuses
 		
 		TitleScreen titlescreen = new TitleScreen(hints, 1);
 		MiniGame2 p = new MiniGame2();
