@@ -34,19 +34,19 @@ import javafx.embed.swing.JFXPanel;
 
 public class TitleScreen extends JFrame implements ActionListener {
 
-	private static String alfavit = " ";
+	private static String alfavit = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя     ";
 	private static String alphabet = "qwertyuioplkjhgfdsazxcvbnm ";
 	private static Vector<Hint> hints = new Vector<Hint>();
-	private static JButton option1 = new JButton(" ");
-	private static JButton option2 = new JButton(" ");
-	private static JButton option3 = new JButton("");
-	private static JButton option4 = new JButton("");
-	private static JLabel head = new JLabel(" ");
-	private static JLabel reception1 = new JLabel("<html> </html>");
-	private static JLabel author1 = new JLabel("<html> , <br> </html>");
+	private static JButton option1 = new JButton("Историческое начало");
+	private static JButton option2 = new JButton("Настраиваемое начало");
+	private static JButton option3 = new JButton("Руководство");
+	private static JButton option4 = new JButton("Выход");
+	private static JLabel head = new JLabel("ВИКТОРИЯ ТРИ");
+	private static JLabel reception1 = new JLabel("<html>Самая ожидаемая глобальная стратегия тысячелетия</html>");
+	private static JLabel author1 = new JLabel("<html>Всемирно известный канцлер, <br> Отто фон Леопольд Бисмарк</html>");
 	private static JLabel mark1 = new JLabel("2.718284590452353602874713526624977572/3");
-	private static JLabel reception2 = new JLabel("<html> , , , . , . , , , . , , . , . - , , , , . ...</html>");
-	private static JLabel author2 = new JLabel("<html> , <br> I</html>");
+	private static JLabel reception2 = new JLabel("<html>Однажды утром я проснулся, почесал за ухом, оделся, умылся и сел завтракать. Сначала я откусил небольшой кусок от лежавшего прямо передо мной сочного бутерброда с колбасой, кашей и огурцами. Его вкус был воистину незабываем, я внезапно почувствовал, как все мое тело наполняет невиданный заряд энергии, способный обеспечить меня бодростью на весь последующий день. Я отодвинул стул от стола, встал со стула, после чего задвинул стул обратно под стол. Все системы моего организма работают удивительно слаженно, они привыкли к взаимодействию за долгие годы существования моего бренного тела. По пищеводу в желудок спешат-спешат частично переваренный кусок бутерброда с колбасой, кашей и огурцами и стакан с водой, там их ожидают выработанные заранее, специально к их прибытию, пищеварительные соки. Лишь одинокие мои ноги медленно совершают хилые шаги по дороге к православному храму...</html>");
+	private static JLabel author2 = new JLabel("<html>Его Святейшество, кандидат юридических наук<br>патриарх Алексий I</html>");
 	private static JLabel mark2 = new JLabel("2.718284590452353602874713526624977572/3");
 	private static JLabel background = new JLabel();
 	private static JLabel protagonist = new JLabel();
@@ -62,7 +62,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 	private int whatsgoingon = new Integer(0);
 	private int animation_status = new Integer(0);
 	private int epilepsy_power = new Integer(1);
-	private static JLabel warning = new JLabel("");
+	private static JLabel warning = new JLabel("предупреждение");
 	private static JLabel random1 = new JLabel("");
 	private static JLabel random2 = new JLabel("");
 	private static JLabel random3 = new JLabel("");
@@ -220,7 +220,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 		}
 	}
 
-	public static BufferedImage resize(Bufferedmage image, int scaledWidth, int scaledHeight, boolean preserveAlpha) {
+	public static BufferedImage resize(BufferedImage image, int scaledWidth, int scaledHeight, boolean preserveAlpha) {
 		int imageType = preserveAlpha ? BufferedImage.TYPE_INT_RGB : BufferedImage.TYPE_INT_ARGB;
 		BufferedImage scaledBI = new BufferedImage(scaledWidth, scaledHeight, imageType);
 		Graphics2D g = scaledBI.createGraphics();
@@ -288,7 +288,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 		this.setResizable(false);
 		hints.addAll(_hints);
 		epilepsy_power = _epilepsy_power;
-		setTitle(" ");
+		setTitle("ВИКТОРИЯ ТРИ");
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		try {
@@ -567,10 +567,10 @@ public class TitleScreen extends JFrame implements ActionListener {
 			animation_status++;
 			if (animation_status == 1) {
 				hideAll();
-				setTitle(" ");
+				setTitle("ЭКРАН ВЫБОРА");
 				background.setIcon(new ImageIcon(getImagefromFile("src/Assets/Art/Select.PNG")));
 				background.setVisible(true);
-				head.setText("<html> </html>");
+				head.setText("<html>Стартовое Событие Начала</html>");
 				head.setBounds(0, -30, 180, 150);
 				head.setVisible(true);
 				option1.setForeground(new Color(0, 0, 0));
@@ -581,10 +581,10 @@ public class TitleScreen extends JFrame implements ActionListener {
 				option2.setBounds(180, 45, 210, 45);
 				option3.setBounds(180, 90, 210, 45);
 				option4.setBounds(180, 135, 210, 45);
-				option1.setText(" 2");
-				option2.setText(" ");
-				option3.setText(" ");
-				option4.setText(" ");
+				option1.setText("Мощная рыба 2");
+				option2.setText("Космическое пузо");
+				option3.setText("Мощная рыба");
+				option4.setText("Пожиратель мух");
 				option1.setVisible(true);
 				option2.setVisible(true);
 				option3.setVisible(true);
@@ -611,21 +611,21 @@ public class TitleScreen extends JFrame implements ActionListener {
 			animation_status++;
 			if (animation_status == 1) {
 				hideAll();
-				setTitle(" ");
+				setTitle("СПРЯЧЬ ПИСЬМО ЛЕОПОЛЬДА ОТ НАПОЛЕОНА");
 				timer_minigame0.setDelay(50);
 				playMusic(danger_player, "src/Assets/Music/Danger0.mp3", 40);
 				danger_player.close();
 				initMiniGame0();
 			} else if (animation_status == -319) {
 				hideAll();
-				titleplayer.close();
+				title_player.close();
 				playMusic(title_player, "src/Assets/Music/Victory0.mp3", 75);
 				actor[0].setIcon(new ImageIcon(getImagefromFile("src/Assets/Art/Random/3.PNG")));
 				actor[0].setBounds(0, 0, 810, 540);
 				actor[0].setVisible(true);
 			} else if (animation_status < -221) {
 				head.setBounds(rand(0, 100), 100, 600, 600);
-				head.setText("");
+				head.setText("ПОБЕДА");
 				head.setFont(new Font("Times New Roman", 1, rand(80, 117)));
 				head.setForeground(new Color(0, rand(0, 255), rand(0, 255)));
 				head.setVisible(true);
@@ -648,12 +648,12 @@ public class TitleScreen extends JFrame implements ActionListener {
 				whatsgoingon = 3;
 			} else if (animation_status < -121) {
 				head.setBounds(rand(0, 100), 100, 900, 100);
-				head.setText(" ");
+				head.setText("Ваша экспедиция обнаружила исток Нила");
 				head.setFont(new Font("Times New Roman", 1, rand(24, 31)));
 				head.setForeground(new Color(rand(0, 255), rand(0, 255), 0));
 				head.setVisible(true);
 				reception1.setBounds(rand(0, 100), 300, 900, 100);
-				reception1.setText(" 100 ");
+				reception1.setText("Вы получаете 100 перстижа");
 				reception1.setFont(new Font("Comic Sans", 1, rand(20, 29)));
 				reception1.setForeground(new Color(rand(0, 255), 0, rand(0, 255)));
 				reception1.setVisible(true);
@@ -682,7 +682,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 			animation_status++;
 			if (animation_status == 1) {
 				hideAll();
-				setTitle(" - ");
+				setTitle("ПОМОГИ БИСМАРКУ ОРГАНИЗОВАТЬ ФРАНКО-ПРУССКУЮ ВОЙНУ");
 				background.setIcon(new ImageIcon(getImagefromFile("src/Assets/Art/MiniGame1/Background.PNG")));
 				background.setVisible(true);
 				background.setBounds(0, 0, 990, 660);
@@ -702,7 +702,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 			} else if (animation_status == 2000000) {
 				hideAll();
 				head.setBounds(400, 300, 600, 100);
-				head.setText("!");
+				head.setText("Победа!");
 				head.setFont(new Font("Times New Roman", 1, rand(40, 57)));
 				head.setForeground(new Color(0, 255, 255));
 				head.setVisible(true);
@@ -713,7 +713,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 			} else if (animation_status == 1000000) {
 				hideAll();
 				head.setBounds(100, 100, 600, 100);
-				head.setText(" !");
+				head.setText("Спокойной ночи!");
 				head.setFont(new Font("Times New Roman", 1, rand(40, 57)));
 				head.setForeground(new Color(255, 255, 0));
 				head.setVisible(true);
@@ -727,7 +727,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 			animation_status++;
 			if (animation_status == 1) {
 				hideAll();
-				setTitle(" ");
+				setTitle("ВМЕСТЕ С ВИЛЬГЕЛЬМОМ ПОЗОВИ НЕМЦЕВ ВОЕВАТЬ");
 				background.setIcon(new ImageIcon(getImagefromFile("src/Assets/Art/MiniGame3/Neuron.PNG")));
 				background.setVisible(true);
 				background.setBounds(0, 0, 990, 660);
@@ -826,7 +826,7 @@ public class TitleScreen extends JFrame implements ActionListener {
 		// end fish
 
 		// check if the fish is visible
-		if (labFishIsVisibe() || true) {
+		if (labFishIsVisible() || true) {
 			actor[0].setVisible(true);
 		} else {
 			actor[0].setVisible(false);
